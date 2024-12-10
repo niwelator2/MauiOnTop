@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage"
+             Title="Gra w Kości">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Gra w Kości" 
+               FontSize="24"
+               HorizontalOptions="Center" />
+        
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Image x:Name="Dice1" WidthRequest="50" HeightRequest="50" />
+            <Image x:Name="Dice2" WidthRequest="50" HeightRequest="50" />
+            <Image x:Name="Dice3" WidthRequest="50" HeightRequest="50" />
+            <Image x:Name="Dice4" WidthRequest="50" HeightRequest="50" />
+            <Image x:Name="Dice5" WidthRequest="50" HeightRequest="50" />
+            <Image x:Name="Dice6" WidthRequest="50" HeightRequest="50" />
+        </HorizontalStackLayout>
+
+        <Label x:Name="CurrentRollResult" Text="Wynik tego losowania: 0"
+               FontSize="16"
+               HorizontalOptions="Center" />
+        <Label x:Name="GameResult" Text="Wynik gry: 0"
+               FontSize="16"
+               HorizontalOptions="Center" />
+        
+        <VerticalStackLayout Spacing="10">
+            <Button Text="Rzuć Kośćmi"
+                    Clicked="OnRollDiceClicked" />
+            <Button Text="Resetuj Wynik"
+                    Clicked="OnResetClicked" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
